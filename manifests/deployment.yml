@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "devgovaks-97a8"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "devgovaks-97a8"
+  template:
+    metadata:
+      labels:
+        app: "devgovaks-97a8"
+    spec:
+      containers:
+        - name: "devgovaks-97a8"
+          image: "acrworkflow1674613917718.azurecr.io/devgovaks"
+          ports:
+          - containerPort: 80
